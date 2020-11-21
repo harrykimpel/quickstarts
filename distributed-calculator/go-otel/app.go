@@ -11,10 +11,10 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/gorilla/mux"
-	"github.com/newrelic/go-agent/v3/integrations/nrgorilla"
-	newrelic "github.com/newrelic/go-agent/v3/newrelic"
+	"github.com/newrelic/newrelic-telemetry-sdk-go/telemetry"
 )
 
 type Operands struct {
@@ -32,24 +32,38 @@ func add(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	app, err := newrelic.NewApplication(
-		newrelic.ConfigAppName("distributed-calculator-go-adder"),
-		newrelic.ConfigLicense("<NEW-RELIC-LICENSE-KEY>"),
-		newrelic.ConfigDebugLogger(os.Stdout),
-		func(config *newrelic.Config) {
-			config.DatastoreTracer.SlowQuery.Enabled = true
-			config.DatastoreTracer.SlowQuery.Threshold = 1
-			config.DistributedTracer.Enabled = true
-		},
-	)
-	if nil != err {
+	h, err := telemetry.NewHarvester(telemetry.ConfigAPIKey(os.Getenv("NEW_RELIC_INSIGHTS_INSERT_API_KEY")))
+	if err != nil {
 		fmt.Println(err)
-		os.Exit(1)
 	}
 
-	router := mux.NewRouter()
-	router.Use(nrgorilla.Middleware(app))
+	// Record Gauge, Count, and Summary metrics using RecordMetric. These
+	// metrics are not aggregated.  This is useful for exporting metrics
+	// recorded by another system.
+	h.RecordMetric(telemetry.Gauge{
+		Timestamp: time.Now(),
+		Value:     1,
+		Name:      "myMetric",
+		Attributes: map[string]interface{}{
+			"color": "purple",
+		},
+	})
 
-	router.HandleFunc(newrelic.WrapHandleFunc(app, "/add", add))
+	// Record spans using RecordSpan.
+	h.RecordSpan(telemetry.Span{
+		ID:          "12345",
+		TraceID:     "67890",
+		Name:        "purple-span",
+		Timestamp:   time.Now(),
+		Duration:    time.Second,
+		ServiceName: "DistributedCalculatorGoAdderOpenTelemetry",
+		Attributes: map[string]interface{}{
+			"color": "purple",
+		},
+	})
+
+	router := mux.NewRouter()
+
+	router.HandleFunc("/add", add).Methods("POST", "OPTIONS")
 	log.Fatal(http.ListenAndServe(":6000", router))
 }
