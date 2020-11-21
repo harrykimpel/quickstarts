@@ -20,8 +20,8 @@ spec:
         dapr.io/config: "appconfig"
     spec:
       containers:
-      - name: add
-        image: dapriosamples/distributed-calculator-go:edge
-        ports:
-        - containerPort: 6000
-        imagePullPolicy: Always
+        - name: add
+          image: harryacr.azurecr.io/distributed-calculator-go:edge
+          ports:
+            - containerPort: 6000
+          imagePullPolicy: Always

@@ -8,9 +8,9 @@ spec:
   selector:
     app: calculator-front-end
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 8080
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
   type: LoadBalancer
 
 ---
@@ -36,8 +36,8 @@ spec:
         dapr.io/config: "appconfig"
     spec:
       containers:
-      - name: calculator-front-end
-        image: dapriosamples/distributed-calculator-react-calculator:edge
-        ports:
-        - containerPort: 8080
-        imagePullPolicy: Always
+        - name: calculator-front-end
+          image: harryacr.azurecr.io/distributed-calculator-react-calculator:edge
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always

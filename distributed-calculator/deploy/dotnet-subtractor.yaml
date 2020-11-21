@@ -20,8 +20,8 @@ spec:
         dapr.io/config: "appconfig"
     spec:
       containers:
-      - name: subtract
-        image: dapriosamples/distributed-calculator-csharp:edge
-        ports:
-        - containerPort: 80
-        imagePullPolicy: Always
+        - name: subtract
+          image: harryacr.azurecr.io/distributed-calculator-csharp:edge
+          ports:
+            - containerPort: 80
+          imagePullPolicy: Always

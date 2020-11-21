@@ -1,7 +1,7 @@
 DOCKER_IMAGE_PREFIX ?=distributed-calculator-
 APPS                ?=node python go csharp react-calculator
 
-SAMPLE_REGISTRY     ?=docker.io/dapriosamples
+SAMPLE_REGISTRY     ?=harryacr.azurecr.io
 REL_VERSION         ?=edge
 
 # Add latest tag if LATEST_RELEASE is true

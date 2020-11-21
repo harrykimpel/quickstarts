@@ -3,6 +3,7 @@
 // Licensed under the MIT License.
 // ------------------------------------------------------------
 
+require('newrelic');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
@@ -15,9 +16,9 @@ app.use(cors());
 app.post('/divide', (req, res) => {
   let args = req.body;
   const [operandOne, operandTwo] = [Number(args['operandOne']), Number(args['operandTwo'])];
-  
+
   console.log(`Dividing ${operandOne} by ${operandTwo}`);
-  
+
   let result = operandOne / operandTwo;
   res.send(result.toString());
 });
