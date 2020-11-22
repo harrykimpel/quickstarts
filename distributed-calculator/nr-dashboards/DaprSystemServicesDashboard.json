@@ -1,0 +1,394 @@
+{
+    "dashboard": {
+        "editable": "EDITABLE_BY_ALL",
+        "name": "Dapr System Services Dashboard",
+        "pages": [
+            {
+                "visibility": "ALL",
+                "editable": "EDITABLE_BY_ALL",
+                "gridColumnCount": 12,
+                "name": "Dapr System Services Dashboard",
+                "widgets": {
+                    "facetChart": [
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT rate(sum(process_cpu_seconds_total), 1 SECONDS) FROM Metric WHERE (podName RLIKE '(dapr-sentry|dapr-sidecar-injector|dapr-placement|dapr-operator).*') SINCE 60 MINUTES AGO UNTIL NOW FACET podName LIMIT 100 TIMESERIES 300000 SLIDE BY 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 2,
+                                "height": 3,
+                                "row": 1,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "Total CPU usage (kernel and user)"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24661825
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT rate(sum(process_resident_memory_bytes), 1 SECONDS) FROM Metric WHERE (podName RLIKE '(dapr-sentry|dapr-sidecar-injector|dapr-placement|dapr-operator).*') SINCE 60 MINUTES AGO UNTIL NOW FACET podName LIMIT 100 TIMESERIES 300000 SLIDE BY 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 6,
+                                "height": 3,
+                                "row": 1,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "Memory usage in bytes"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24671318
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT max(go_goroutines) FROM Metric WHERE (`label.app` RLIKE '(dapr-sentry|dapr-sidecar-injector|dapr-placement|dapr-operator)') SINCE 60 MINUTES AGO UNTIL NOW FACET `label.app` LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 10,
+                                "height": 3,
+                                "row": 1,
+                                "width": 3
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "Number of GO routines"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24671321
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT cardinality(dapr_operator_service_created_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET app_id LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 4,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "# Services Created"
+                            },
+                            "visualization": "FACETED_AREA_CHART",
+                            "widgetId": 24671322
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT cardinality(dapr_operator_service_deleted_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 7,
+                                "height": 3,
+                                "row": 4,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "# Services Deleted"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24671323
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_injector_sidecar_injection_requests_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 7,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "# sidecar injection requests"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24671335
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_injector_sidecar_injection_succeeded_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 7,
+                                "height": 3,
+                                "row": 7,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "# successful sidecar injected"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24671393
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT (average(dapr_sentry_cert_sign_failure_total) * cardinality(dapr_sentry_cert_sign_failure_total)) FROM Metric WHERE (podName = 'dapr-sentry') SINCE 60 MINUTES AGO UNTIL NOW FACET reason LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 7,
+                                "height": 3,
+                                "row": 10,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "CSR Failures"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24671639
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT (average(dapr_sentry_servercert_issue_failed_total) * cardinality(dapr_sentry_servercert_issue_failed_total)) FROM Metric WHERE (app = 'dapr-sentry') SINCE 60 MINUTES AGO UNTIL NOW FACET reason LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 7,
+                                "height": 3,
+                                "row": 13,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "Server TLS certificate issuance failures"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24671689
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_placement_hosts_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 16,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "# total replicas"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24671690
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_placement_nonactorhosts_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 7,
+                                "height": 3,
+                                "row": 16,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "# replicas not hosting actors"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24671692
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_placement_actortypes_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 19,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "# actor types"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24671693
+                        }
+                    ],
+                    "inaccessible": [],
+                    "inventory": [],
+                    "markdown": [],
+                    "metricLineChart": [],
+                    "predefinedMetricChart": [],
+                    "serviceMap": [],
+                    "simpleEvent": [
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT (average(dapr_sentry_issuercert_changed_total) * cardinality(dapr_sentry_issuercert_changed_total)) FROM Metric WHERE (podName = 'dapr-sentry') SINCE 60 MINUTES AGO UNTIL NOW TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 13,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "notes": null,
+                                "title": "Issuer cert and key changed total"
+                            },
+                            "visualization": "LINE_CHART",
+                            "widgetId": 24671676
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT (average(dapr_sentry_cert_sign_request_received_total) * cardinality(dapr_sentry_cert_sign_request_received_total)) as 'dapr_sentry_cert_sign_request_received_total' FROM Metric WHERE (podName = 'dapr-sentry') SINCE 60 MINUTES AGO UNTIL NOW TIMESERIES 30000"
+                                },
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT (average(dapr_sentry_cert_sign_success_total) * cardinality(dapr_sentry_cert_sign_success_total)) as 'dapr_sentry_cert_sign_success_total' FROM Metric WHERE (podName = 'dapr-sentry') SINCE 60 MINUTES AGO UNTIL NOW TIMESERIES 30000"
+                                },
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT (average(dapr_sentry_cert_sign_failure_total) * cardinality(dapr_sentry_cert_sign_failure_total)) as 'dapr_sentry_cert_sign_failure_total' FROM Metric WHERE (podName = 'dapr-sentry') SINCE 60 MINUTES AGO UNTIL NOW TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 2,
+                                "height": 3,
+                                "row": 10,
+                                "width": 5
+                            },
+                            "presentation": {
+                                "notes": null,
+                                "title": "Certificate Signing Request ( CSR ) from Dapr runtime"
+                            },
+                            "visualization": "LINE_CHART",
+                            "widgetId": 24671628
+                        }
+                    ],
+                    "thresholdEvent": [
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(timestamp)- latest(process_start_time_seconds) FROM Metric where  deploymentName in ('dapr-sentry','dapr-placement','dapr-sidecar-injector','dapr-operator') LIMIT 100 facet deploymentName"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 1,
+                                "width": 1
+                            },
+                            "presentation": {
+                                "notes": null,
+                                "threshold": {
+                                    "red": null,
+                                    "yellow": null
+                                },
+                                "title": "Uptime"
+                            },
+                            "visualization": "BILLBOARD",
+                            "widgetId": 24661821
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT (min(dapr_sentry_issuercert_expiry_timestamp) - (aggregationendtime() / 1000))/60/60/24 as 'Days' FROM Metric SINCE 60 MINUTES AGO UNTIL NOW "
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 10,
+                                "width": 1
+                            },
+                            "presentation": {
+                                "notes": null,
+                                "threshold": {
+                                    "red": null,
+                                    "yellow": null
+                                },
+                                "title": "Root/Issuer cert expiry"
+                            },
+                            "visualization": "BILLBOARD",
+                            "widgetId": 24671566
+                        }
+                    ]
+                }
+            }
+        ],
+        "visibility": "ALL"
+    },
+    "accountId": 1811877
+}
