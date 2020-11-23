@@ -1,0 +1,98 @@
+{
+    "dashboard": {
+        "editable": "EDITABLE_BY_ALL",
+        "name": "Dapr Sidecar Dashboard",
+        "pages": [
+            {
+                "visibility": "ALL",
+                "editable": "EDITABLE_BY_ALL",
+                "gridColumnCount": 12,
+                "name": "Dapr Sidecar Dashboard",
+                "widgets": {
+                    "facetChart": [
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT rate(sum(process_cpu_seconds_total), 1 SECONDS) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET podName LIMIT 100 TIMESERIES 300000 SLIDE BY 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 3,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": ""
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24672826
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT rate(sum(k8s.container.cpuCoresUtilization), 5 MINUTES) FROM Metric SINCE 3600 SECONDS AGO UNTIL NOW  LIMIT 100 TIMESERIES FACET k8s.podName"
+                                }
+                            ],
+                            "layout": {
+                                "column": 5,
+                                "height": 3,
+                                "row": 3,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": ""
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24672935
+                        }
+                    ],
+                    "inaccessible": [],
+                    "inventory": [],
+                    "markdown": [],
+                    "metricLineChart": [],
+                    "predefinedMetricChart": [],
+                    "serviceMap": [],
+                    "simpleEvent": [],
+                    "thresholdEvent": [
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "from K8sContainerSample select (aggregationendtime() / 1000) - max(timestamp)/60/60/24 where containerName = 'daprd' and nodeName like '%14753019%' facet podName"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 2,
+                                "row": 1,
+                                "width": 12
+                            },
+                            "presentation": {
+                                "notes": null,
+                                "threshold": {
+                                    "red": null,
+                                    "yellow": null
+                                },
+                                "title": ""
+                            },
+                            "visualization": "BILLBOARD",
+                            "widgetId": 24672809
+                        }
+                    ]
+                }
+            }
+        ],
+        "visibility": "ALL"
+    },
+    "accountId": 1811877
+}

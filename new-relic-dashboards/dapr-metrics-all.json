@@ -1,0 +1,1040 @@
+{
+    "dashboard": {
+        "editable": "EDITABLE_BY_ALL",
+        "name": "Dapr",
+        "pages": [
+            {
+                "visibility": "ALL",
+                "editable": "EDITABLE_BY_ALL",
+                "gridColumnCount": 12,
+                "name": "Dapr",
+                "widgets": {
+                    "facetChart": [
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_client_completed_rpcs_bucket) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 1,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_client_completed_rpcs_bucket"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24673073
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_client_completed_rpcs_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 5,
+                                "height": 3,
+                                "row": 1,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_client_completed_rpcs_count"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24673074
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_client_completed_rpcs_sum) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 9,
+                                "height": 3,
+                                "row": 1,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_client_completed_rpcs_sum"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24673075
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_client_received_bytes_per_rpc_bucket) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 4,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_client_received_bytes_per_rpc_bucket"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24673078
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_client_received_bytes_per_rpc_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 5,
+                                "height": 3,
+                                "row": 4,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_client_received_bytes_per_rpc_count"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24673080
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_client_received_bytes_per_rpc_sum) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 9,
+                                "height": 3,
+                                "row": 4,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_client_received_bytes_per_rpc_sum"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24673082
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_client_sent_bytes_per_rpc) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 7,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_client_sent_bytes_per_rpc"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24673093
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_server_completed_rpcs) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 7,
+                                "height": 3,
+                                "row": 7,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_server_completed_rpcs"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24673096
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_server_received_bytes_per_rpc_bucket) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 10,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_server_received_bytes_per_rpc_bucket"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24673098
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_server_received_bytes_per_rpc_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 5,
+                                "height": 3,
+                                "row": 10,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_server_received_bytes_per_rpc_count"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24673101
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_server_received_bytes_per_rpc_sum) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 9,
+                                "height": 3,
+                                "row": 10,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_server_received_bytes_per_rpc_sum"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24673102
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_server_sent_bytes_per_rpc_bucket) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 13,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_server_sent_bytes_per_rpc_bucket"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694543
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_server_sent_bytes_per_rpc_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 5,
+                                "height": 3,
+                                "row": 13,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_server_sent_bytes_per_rpc_count"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694550
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_server_sent_bytes_per_rpc_sum) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 9,
+                                "height": 3,
+                                "row": 13,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_server_sent_bytes_per_rpc_sum"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694551
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_server_server_latency_bucket) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 16,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_server_server_latency_bucket"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694589
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_server_server_latency_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 5,
+                                "height": 3,
+                                "row": 16,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_server_server_latency_count"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694591
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_grpc_io_server_server_latency_sum) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 9,
+                                "height": 3,
+                                "row": 16,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_grpc_io_server_server_latency_sum"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694604
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_client_completed_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 19,
+                                "width": 12
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_client_completed_count"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694658
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_client_received_bytes_bucket) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 22,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_client_received_bytes_bucket"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694661
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_client_received_bytes_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 5,
+                                "height": 3,
+                                "row": 22,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_client_received_bytes_count"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694705
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_client_received_bytes_sum) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 9,
+                                "height": 3,
+                                "row": 22,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_client_received_bytes_sum"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694728
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_client_roundtrip_latency_bucket) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 25,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_client_roundtrip_latency_bucket"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694730
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_client_roundtrip_latency_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 5,
+                                "height": 3,
+                                "row": 25,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_client_roundtrip_latency_count"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694755
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_client_roundtrip_latency_sum) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 9,
+                                "height": 3,
+                                "row": 25,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_client_roundtrip_latency_sum"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694757
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_client_sent_bytes_bucket) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 28,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_client_sent_bytes_bucket"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694769
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_client_sent_bytes_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 5,
+                                "height": 3,
+                                "row": 28,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_client_sent_bytes_count"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694771
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_client_sent_bytes_sum) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 9,
+                                "height": 3,
+                                "row": 28,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_client_sent_bytes_sum"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694808
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_server_latency_bucket) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 31,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_server_latency_bucket"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694810
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_server_latency_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 5,
+                                "height": 3,
+                                "row": 31,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_server_latency_count"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694822
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_server_latency_sum) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 9,
+                                "height": 3,
+                                "row": 31,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_server_latency_sum"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694823
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_server_request_bytes_bucket) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 34,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_server_request_bytes_bucket"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694825
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_server_request_bytes_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 5,
+                                "height": 3,
+                                "row": 34,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_server_request_bytes_count"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694826
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_server_request_bytes_sum) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 9,
+                                "height": 3,
+                                "row": 34,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_server_request_bytes_sum"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694837
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_server_request_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 37,
+                                "width": 12
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_server_request_count"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694838
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_server_response_bytes_bucket) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 40,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_server_response_bytes_bucket"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694840
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_server_response_bytes_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 5,
+                                "height": 3,
+                                "row": 40,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_server_response_bytes_count "
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694851
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_server_response_bytes_sum) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 9,
+                                "height": 3,
+                                "row": 40,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_server_response_bytes_sum"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694852
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_http_server_response_count) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 43,
+                                "width": 12
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_http_server_response_count"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694854
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_injector_sidecar_injection_requests_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 46,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_injector_sidecar_injection_requests_total"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694857
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_injector_sidecar_injection_succeeded_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 7,
+                                "height": 3,
+                                "row": 46,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_injector_sidecar_injection_succeeded_total"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694859
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_operator_service_created_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 49,
+                                "width": 12
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_operator_service_created_total"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694861
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_runtime_mtls_init_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 52,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_runtime_mtls_init_total"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694863
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_runtime_mtls_workload_cert_rotated_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 7,
+                                "height": 3,
+                                "row": 52,
+                                "width": 6
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_runtime_mtls_workload_cert_rotated_total"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694874
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_sentry_cert_sign_request_received_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 1,
+                                "height": 3,
+                                "row": 55,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_sentry_cert_sign_request_received_total"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694905
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_sentry_cert_sign_success_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 5,
+                                "height": 3,
+                                "row": 55,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_sentry_cert_sign_success_total"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694908
+                        },
+                        {
+                            "accountId": 1811877,
+                            "data": [
+                                {
+                                    "accountId": 1811877,
+                                    "nrql": "SELECT latest(dapr_sentry_issuercert_changed_total) FROM Metric SINCE 60 MINUTES AGO UNTIL NOW FACET dimensions() LIMIT 100 TIMESERIES 30000"
+                                }
+                            ],
+                            "layout": {
+                                "column": 9,
+                                "height": 3,
+                                "row": 55,
+                                "width": 4
+                            },
+                            "presentation": {
+                                "drilldownDashboardId": null,
+                                "notes": null,
+                                "title": "dapr_sentry_issuercert_changed_total"
+                            },
+                            "visualization": "FACETED_LINE_CHART",
+                            "widgetId": 24694919
+                        }
+                    ],
+                    "inaccessible": [],
+                    "inventory": [],
+                    "markdown": [],
+                    "metricLineChart": [],
+                    "predefinedMetricChart": [],
+                    "serviceMap": [],
+                    "simpleEvent": [],
+                    "thresholdEvent": []
+                }
+            }
+        ],
+        "visibility": "ALL"
+    },
+    "accountId": 1811877
+}
