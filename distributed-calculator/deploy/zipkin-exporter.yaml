@@ -1,0 +1,12 @@
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: zipkin
+  namespace: default
+spec:
+  type: exporters.zipkin
+  metadata:
+    - name: enabled
+      value: "true"
+    - name: exporterAddress
+      value: "https://trace-api.newrelic.com/trace/v1?Api-Key=<NR-INSIGHTS-INSERT-API-KEY>&Data-Format=zipkin&Data-Format-Version=2"
