@@ -1,1 +1,12 @@
 package-lock.json
+.DS_Store
+service_invocation/csharp/http/AppHost/bin/
+service_invocation/csharp/http/AppHost/obj/
+service_invocation/csharp/http/checkout/bin/
+service_invocation/csharp/http/checkout/obj/
+service_invocation/csharp/http/checkout/.dapr/
+service_invocation/csharp/http/order-processor/bin/
+service_invocation/csharp/http/order-processor/obj/
+service_invocation/csharp/http/order-processor/.dapr/
+service_invocation/csharp/http/ServiceDefaults/bin/
+service_invocation/csharp/http/ServiceDefaults/obj/
